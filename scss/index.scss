@@ -8,11 +8,6 @@ $color-blue-2: #1d365e;
 }
 
 header {
-  // .container {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  // }
   nav {
     a {
       color: $color-blue-2;
@@ -40,5 +35,13 @@ header {
   .logo {
     font-size: 50px;
     color: $color-blue-1;
+  }
+}
+
+.title {
+  h1 {
+    color: $color-blue-1;
+    background-color: $color-blue-2;
+    // font-size: 24px;
   }
 }

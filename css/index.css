@@ -28,4 +28,9 @@ header nav a:hover::after {
 header .logo {
   font-size: 50px;
   color: #2a73dd;
+}
+
+.title h1 {
+  color: #2a73dd;
+  background-color: #1d365e;
 }/*# sourceMappingURL=index.css.map */
