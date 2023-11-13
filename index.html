@@ -25,8 +25,17 @@
         </nav>
       </div>
     </header>
-    <div class="title text-center text-2xl pt-7">
-      <h1 class="p-2 sm:text-sm md:text-xl">LIST SMARTPHONES</h1>
+    <div class="title pt-7">
+      <h1 class="p-2 sm:text-sm md:text-xl text-center text-2xl">
+        LIST SMARTPHONES
+      </h1>
+      <div class="container pt-4 text-center">
+        <label class="" for="filter">Bộ lọc</label>
+        <select name="filter" id="filter" onchange="renderType()">
+          <option value="samsung">Samsung</option>
+          <option value="iphone">Iphone</option>
+        </select>
+      </div>
     </div>
 
     <section class="list pb-5">

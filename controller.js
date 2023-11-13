@@ -17,7 +17,10 @@ function renderProductList(productArr) {
           <p class=""><span class="font-bold">Front Camera:</span> ${data.frontCamera} </p>
           <p class=""><span class="font-bold">Description:</span> ${data.desc}</p>
         </div>
-      </div>
+        <div class="card__footer">
+        <button class="">Add to Cart</button>
+        </div>
+    </div>
     `;
   });
   document.getElementById("grid-list").innerHTML = htmlContent;

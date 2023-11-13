@@ -34,16 +34,36 @@ header .logo {
   color: whitesmoke;
   background-color: #1d365e;
 }
+.title select {
+  cursor: pointer;
+}
 
 .list .grid .card__item {
-  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s;
   padding: 10px;
   border-radius: 8px;
 }
 .list .grid .card__item:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #2a73dd;
   color: white;
 }
 .list .grid .card__item .card__img img {
   border-radius: 8px;
+}
+.list .grid .card__item .card__footer {
+  margin-top: 20px;
+  text-align: center;
+}
+.list .grid .card__item .card__footer button {
+  padding: 6px 25px;
+  background-color: #1d365e;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
