@@ -1,0 +1,52 @@
+$color-blue-1: #2a73dd;
+$color-blue-2: #1d365e;
+//mixin
+@mixin btn-theme($colorText, $colorBorder, $background) {
+  border: 2px solid $colorBorder;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background: $background;
+  color: $colorText;
+}
+
+//nested
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav {
+    a {
+      color: $color-blue-2;
+      transition: 0.3s;
+      &:hover {
+        color: $color-blue-1;
+      }
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background: $color-blue-1;
+        transition: 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  .logo {
+    font-size: 50px;
+    color: $color-blue-1;
+  }
+}
