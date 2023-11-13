@@ -1,13 +1,5 @@
 $color-blue-1: #2a73dd;
 $color-blue-2: #1d365e;
-//mixin
-@mixin btn-theme($colorText, $colorBorder, $background) {
-  border: 2px solid $colorBorder;
-  border-radius: 4px;
-  padding: 10px 20px;
-  background: $background;
-  color: $colorText;
-}
 
 //nested
 .container {
@@ -16,11 +8,11 @@ $color-blue-2: #1d365e;
 }
 
 header {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  // .container {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  // }
   nav {
     a {
       color: $color-blue-2;

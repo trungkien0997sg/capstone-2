@@ -3,11 +3,6 @@
   margin: 0 auto;
 }
 
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 header nav a {
   color: #1d365e;
   transition: 0.3s;
