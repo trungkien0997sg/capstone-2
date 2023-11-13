@@ -25,3 +25,9 @@ function renderProductList(productArr) {
   });
   document.getElementById("grid-list").innerHTML = htmlContent;
 }
+
+function renderType(productArr) {
+  //chưa xong
+  let data = [];
+  productArr.forEach((item) => {});
+}
