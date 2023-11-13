@@ -3,7 +3,7 @@ function renderProductList(productArr) {
   productArr.forEach((data) => {
     htmlContent += `
     <div class="card__item">
-        <div class="card__img">
+        <div class="card__img pb-6 lg:w-50">
           <img
             src="${data.img}"
             alt=""

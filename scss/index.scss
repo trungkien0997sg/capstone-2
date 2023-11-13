@@ -40,8 +40,26 @@ header {
 
 .title {
   h1 {
-    color: $color-blue-1;
+    color: whitesmoke;
     background-color: $color-blue-2;
-    // font-size: 24px;
+  }
+}
+
+.list {
+  .grid {
+    .card__item {
+      transition: 0.6s;
+      padding: 10px;
+      border-radius: 8px;
+      &:hover {
+        background-color: $color-blue-1;
+        color: white;
+      }
+      .card__img {
+        img {
+          border-radius: 8px;
+        }
+      }
+    }
   }
 }
