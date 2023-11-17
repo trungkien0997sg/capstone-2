@@ -41,11 +41,13 @@ header .logo {
 }
 
 thead {
-  background-color: #1d365e;
   color: whitesmoke;
+}
+thead tr {
+  background-color: #1d365e;
+  border-color: black;
 }
 
 tbody tr td {
-  border-color: black;
   text-align: center;
 }/*# sourceMappingURL=admin.css.map */

@@ -49,14 +49,17 @@ header {
 }
 
 thead {
-  background-color: $color-blue-2;
+  tr {
+    background-color: $color-blue-2;
+    border-color: black;
+  }
+
   color: whitesmoke;
 }
 
 tbody {
   tr {
     td {
-      border-color: black;
       text-align: center;
     }
   }
