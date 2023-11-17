@@ -13,17 +13,55 @@
       referrerpolicy="no-referrer"
     />
     <!-- my css -->
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
   </head>
   <body>
-    <header class="shadow-xl fixed w-full bg-white">
+    <header class="shadow-xl w-full bg-white">
       <div class="container flex flex-row justify-between items-center h-20">
         <p class="logo">KiBa</p>
         <nav class="space-x-5">
-          <a href="./index.html" class="active">Home</a>
+          <a href="./index.html">Home</a>
           <a href="./admin.html">Administrator</a>
         </nav>
       </div>
     </header>
+    <section class="title mt-10">
+      <h1 class="p-2 sm:text-sm md:text-xl text-center text-2xl">
+        LIST SMARTPHONES DATA
+      </h1>
+    </section>
+
+    <div class="tblSanPham text-left pt-10" id="tblSanPham">
+      <div class="container">
+        <button class="bg-green-500 p-2 text-white mb-5 rounded">
+          Thêm sản phẩm
+        </button>
+        <!-- BEGIN TABLE SẢN PHẨM -->
+        <table class="w-full border-solid border">
+          <thead class="text-center">
+            <th class="border">ID</th>
+            <th class="border">Tên</th>
+            <th class="border">Giá</th>
+            <th class="border">Hình Ảnh</th>
+            <th class="border">Mô Tả</th>
+            <th class="border">Option</th>
+          </thead>
+          <tbody id="tbl-product"></tbody>
+        </table>
+      </div>
+      <!-- END TABLE SẢN PHẨM -->
+    </div>
+
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- controller -->
+    <script src="admin/controller.js"></script>
+    <!-- my js -->
+    <script src="admin/index.js"></script>
   </body>
 </html>
