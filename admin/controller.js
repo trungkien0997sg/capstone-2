@@ -17,3 +17,16 @@ function renderProductList(productArr) {
   });
   document.getElementById("tbl-product").innerHTML = htmlContent;
 }
+
+function getData() {
+  return {
+    name: document.getElementById("TenSP").value,
+    price: document.getElementById("GiaSP").value * 1,
+    screen: document.getElementById("ScreenSP").value,
+    backCamera: document.getElementById("bCamera").value,
+    frontCamera: document.getElementById("fCamera").value,
+    img: document.getElementById("imgSP").value,
+    desc: document.getElementById("MoTaSP").value,
+    type: document.getElementById("loaiSP").value,
+  };
+}
