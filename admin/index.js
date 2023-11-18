@@ -33,26 +33,28 @@ function deleteProduct(id) {
       console.log(err);
     });
 }
-
 function createProduct() {
-  let productInfo = getData();
-  axios({
-    url: `https://653122ed4d4c2e3f333c7251.mockapi.io/products`,
-    method: "POST",
-    data: productInfo,
-  })
-    .then(function (res) {
-      fetchProductList();
-      Swal.fire({
-        title: "Thành công",
-        text: "Đã thêm sản phẩm",
-        icon: "success",
-        timer: 1500,
-      });
+  let isValid = checkEmptyName() & checkEmptyPrice();
+  if (isValid) {
+    let productInfo = getData();
+    axios({
+      url: `https://653122ed4d4c2e3f333c7251.mockapi.io/products`,
+      method: "POST",
+      data: productInfo,
     })
-    .catch(function (err) {
-      console.log(err);
-    });
+      .then(function (res) {
+        fetchProductList();
+        Swal.fire({
+          title: "Thành công",
+          text: "Đã thêm sản phẩm",
+          icon: "success",
+          timer: 1500,
+        });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 }
 
 function editProduct(id) {
@@ -95,4 +97,37 @@ function updateProduct() {
       });
     })
     .catch(function (err) {});
+}
+
+function tang() {
+  axios({
+    url: "https://653122ed4d4c2e3f333c7251.mockapi.io/products",
+    method: "GET",
+  })
+    .then(function (res) {
+      let product = res.data.sort(function (a, b) {
+        return a.price - b.price;
+      });
+      console.log("product: ", product);
+      renderProductList(product);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+}
+function giam() {
+  axios({
+    url: "https://653122ed4d4c2e3f333c7251.mockapi.io/products",
+    method: "GET",
+  })
+    .then(function (res) {
+      let product = res.data.sort(function (a, b) {
+        return b.price - a.price;
+      });
+      console.log("product: ", product);
+      renderProductList(product);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
 }

@@ -35,20 +35,20 @@
       <div class="container">
         <div class="input__form grid grid-cols-2 border-black border pt-4">
           <div class="form-group">
-            <label>Tên Sản Phẩm</label>
+            <label>Tên Sản Phẩm* :</label>
             <input
               id="TenSP"
               class="form-control"
-              placeholder="Nhập vào tên sản phẩm"
+              placeholder="(không bỏ trống)"
             />
           </div>
           <div class="form-group">
-            <label>Giá</label>
+            <label>Giá*</label>
             <input
               type="number"
               id="GiaSP"
               class="form-control"
-              placeholder="Nhập vào giá"
+              placeholder="(không bỏ trống)"
             />
           </div>
           <div class="form-group">
@@ -114,6 +114,21 @@
           </div>
         </div>
 
+        <div class="sap__xep">
+          <button
+            onclick="tang()"
+            class="bg-green-500 p-2 text-white mt-5 rounded"
+          >
+            Tăng dần
+          </button>
+          <button
+            onclick="giam()"
+            class="bg-blue-500 p-2 text-white mt-5 rounded"
+          >
+            Giảm dần
+          </button>
+        </div>
+
         <!-- BEGIN TABLE SẢN PHẨM -->
         <table class="w-full border mt-6">
           <thead class="text-center">
@@ -137,6 +152,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- validate -->
+    <script src="./admin/validate.js"></script>
     <!-- sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
